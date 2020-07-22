@@ -1,75 +1,83 @@
-# My Plugin 'Blah'
+# Fish Tech
+> jump to folders by technology
 
-Change this readme to explain the purpose of your plugin.  A [suggested
-format](https://raw.githubusercontent.com/dbader/readme-template/master/README.md)
-is shown below.
-
----------------------
-
-# Product Name
-> Short blurb about what your product does.
-
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-One to two paragraph statement about your product and what it does.
+Fish tech is a little plugin allowing quick switching between technology
+specific areas in a large development folder hierarchy
 
 ![](header.png)
 
 ## Installation
 
-OS X & Linux:
+Fisher:
 
 ```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
+fisher add aabs/fish_tech
 ```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice
-this up with code blocks and potentially more screenshots.
+Imaging your development code tree looks like this:
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+```shell
+$ tree -L 2 ~/dev
+/home/me/dev
+└── by-technology
+    ├── awk
+    ├── elixir
+    ├── fish
+    ├── html
+    ├── javascript
+    ├── kubernetes
+    ├── markdown
+    ├── nixos
+    ├── rdf
+    └── rust
 
-## Development setup
+12 directories, 1 file
+```
 
-Describe how to install all development dependencies and how to run an
-automated test-suite of some kind. Potentially do this for multiple platforms.
+You can quickly jump to your elixir code tree to find that project you've
+forgotten the name of:
 
-```sh
-make install
-npm test
+```shell
+~ $ tech cd elixir
+
+~/d/b/elixir $
+```
+
+if your memory is really bad like mine, then you can even get help selecting the technology areas using `fzf`:
+
+```shell
+~ $ tech open
+
+  rust
+  rdf
+  projects.db
+  nixos
+  markdown
+  kubernetes
+  javascript
+  html
+  fish
+  elixir
+  editors
+> awk
+  12/12
+>
 ```
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
 * 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+    * CHANGE: Initial Creation
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Andrew Matthews – [@aabs](https://twitter.com/aabs) – industrial.inference@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the GPL3 license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/aabs/fish_tech](https://github.com/aabs/fish_tech)
 
 ## Contributing
 
@@ -86,3 +94,7 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
+
+<!--
+ vim: set ts=2 sw=2 tw=80 et foldmethod=syntax foldlevelstart=20 : 
+ -->
