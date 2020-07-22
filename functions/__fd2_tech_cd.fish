@@ -1,4 +1,4 @@
-function __fd2_tech_cd -d ""
+function __fd2_tech_cd -a key -d ""
   cd (__fd2_tech_path $key)
 end
 
