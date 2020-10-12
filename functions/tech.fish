@@ -32,12 +32,12 @@ function tech -d 'commands for working on file hierarchies divided by technologi
 end
 
 function tech_help
-  echo "usage: tech <cmd> [-t <title>] [-g <tags>]"
+  echo "usage: tech <cmd> (key)"
   echo
   echo "tech has various commands for working on file hierarchies divided by technologies:"
   echo
-  echo "   cd        change dir to a chosen technology area" 
+  echo "   cd        (name) change dir to a chosen technology area" 
   echo "   ls        list available technology areas" 
-  echo "   path      get path to a specific area" 
+  echo "   path      (name) get path to a specific area" 
   echo "   open      select a tech area and cd to it" 
 end
